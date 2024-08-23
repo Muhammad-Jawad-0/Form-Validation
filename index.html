@@ -19,7 +19,7 @@
 
         <div class="input-group">
           <label>Phone No.</label>
-          <input type="tel" placeholder="123 456 7890" id="contactPhone" onkeyup="validatePhone()" />
+          <input type="tel" placeholder="+92 3** ******" id="contactPhone" onkeyup="validatePhone()" />
           <span id="number-error"></span>
         </div>
 
@@ -35,7 +35,7 @@
           <span id="msg-error"></span>
         </div>
 
-        <button>Submit</button>
+        <button onclick="return validateForm()">Submit</button>
         <span id="submit-error"></span>
       </form>
 

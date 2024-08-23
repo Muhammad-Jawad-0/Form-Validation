@@ -29,12 +29,12 @@ const validatePhone = () => {
         return false
     }
 
-    if(phone.length !== 10){
+    if(phone.length !== 11){
         phoneError.innerHTML = `phone no should be 10 digits`
         return false
     }
 
-    if(!phone.match(/^[0-9]{10}$/)){
+    if(!phone.match(/^[0-9]{11}$/)){
         phoneError.innerHTML = `only digits please`
         return false
     }
@@ -73,4 +73,15 @@ const validateMessage = () => {
     msgError.innerHTML = `<i class="fa-solid fa-circle-check"></i>`
     return true
 
+}
+
+const validateForm = () => {
+    if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage()){
+        submitError.style.display = "block"
+        submitError.innerHTML = `please fix error to submit`
+        setTimeout(() => {
+            submitError.style.display = "none"
+        },3000)
+        return false
+    }
 }
